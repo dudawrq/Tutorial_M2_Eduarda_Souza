@@ -16,7 +16,7 @@ node
     var sql = 'SELECT * FROM pessoa';
     db.all(sql, [], (err, rows) => {
         if (err) {
-        throw err;
+            throw err;
         }
         res.json(rows);
     });
@@ -30,7 +30,7 @@ node
     var sql = 'SELECT pessoa.nome, pessoa.sobrenome, contato.telefone, contato.email FROM pessoa INNER JOIN contato ON pessoa.id_pessoa = contato.id_contato';
     db.all(sql, [], (err, rows) => {
         if (err) {
-        throw err;
+            throw err;
         }
         res.json(rows);
     });
@@ -44,7 +44,7 @@ node
     var sql = 'SELECT pessoa.nome, pessoa.sobrenome, endereco.rua, endereco.numero_rua, endereco.cidade, endereco.estado FROM pessoa INNER JOIN endereco ON pessoa.id_pessoa = endereco.id_endereco';
     db.all(sql, [], (err, rows) => {
         if (err) {
-        throw err;
+            throw err;
         }
         res.json(rows);
     });
@@ -58,7 +58,7 @@ node
     var sql = 'SELECT * FROM curriculo';
     db.all(sql, [], (err, rows) => {
         if (err) {
-        throw err;
+            throw err;
         }
         res.json(rows);
     });
@@ -72,7 +72,7 @@ node
     var sql = 'SELECT * FROM habilidades';
     db.all(sql, [], (err, rows) => {
         if (err) {
-        throw err;
+            throw err;
         }
         res.json(rows);
     });
@@ -86,7 +86,7 @@ node
     var sql = 'SELECT * FROM realizacoes';
     db.all(sql, [], (err, rows) => {
         if (err) {
-        throw err;
+            throw err;
         }
         res.json(rows);
     });
