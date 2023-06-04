@@ -25,10 +25,10 @@ node
     app.use(express.json());
 
     // Endpoint para criar uma nova pessoa
-    app.post('/pessoa', (req, res) => {
+    app.post('/contato', (req, res) => {
       const { nome, sobrenome, idade } = req.body;
       const db = new sqlite3.Database(DBPATH);
-      const sql = 'INSERT INTO pessoa (nome, sobrenome, idade) VALUES (?, ?, ?)';
+      const sql = 'INSERT INTO Contato (email, telefone, id_contato) VALUES (?, ?, ?)';
       db.run(sql, [nome, sobrenome, idade], function (err) {
         if (err) {
           throw err;
