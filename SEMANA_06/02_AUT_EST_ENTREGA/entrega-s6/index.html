@@ -1,3 +1,4 @@
+</head>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,52 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="visual.css">
-    <script src="app.js"></script>
-    
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Currículo</title>
 </head>
+
 <body>
     <header>
-        <h1>Currículo</h1>
+        <nav>
+            <ul class="navbar">
+              <li><a href="#">Currículo</a></li>
+            </ul>
+          </nav>
+          
     </header>
 
-    <div class="retangulo1">
+    <div class="perfil">
         <img src="images/perfil.jpg" alt="Foto de Perfil" style="width: 100%"></img>
     </div>
-    <div class="retangulo2"></div>
-    <div class="retangulo3"></div>
 
-    <div>
-        <h1 id="pessoa"> Informações Pessoais</h1>
-        <h2 class="corpo">
+    <div class="info_pessoais">
+        <h1> Informações Pessoais</h1>
+        <div>
             <p>Nome: Rocket</p>
             <p>Sobrenome:Raccoon</p>
             <p>Email: rocket.guardiao@gmail.com</p>
             <p>Telefone: (00) 4002-8922</p>
             <p>Endereço: Nave Milano</p>
-        </h2>
+        </div>
     </div>
 
-    <div>
-        <h1 id="formacao">Formação</h1>
-        <h2 class="corpo2">
+    <div class="divisoria1"></div>
+
+    <div class="info_formacao">
+        <h1>Formação</h1>
+        <div>
             <p>Curso: Segurança</p>
             <p>Instituição: Patrulheiros espaciais</p>
             <p>Inicio/Término: 12/01/2014 - 25/04/2018</p>
-        </h2>
+        </div>
     </div>
     
-    <div>
-        <h1 id="realizacoes">Realizações</h1>
-        <h2 class="corpo3">
+    <div class="info_realizacoes">
+        <h1>Realizações</h1>
+        <div>
             <p>Certificado: Líder dos guardiões da galáxia</p>
             <p>Data de emissão: 04/05/2023</p>
             <p>Certificado: Membro honorário dos guardiões da galáxia</p>
             <p>Data de emissão: 17/10/2016</p>
-        </h2>
+        </div>
     </div>
 
- 
+    <div class="info_habilidades">
+        <h1>Habilidades</h1>
+        <div>
+            <p>Força:</p>
+            <p>Agilidade:</p>
+            <p>Inteligencia:</p>
+            <p>Fofura:</p>
+        </div> 
+    </div>
+
+    <script>
+        $("h1").fadeOut(8000);
+        $("h1").fadeIn(8000);
+    </script>
 </body>
 </html>
