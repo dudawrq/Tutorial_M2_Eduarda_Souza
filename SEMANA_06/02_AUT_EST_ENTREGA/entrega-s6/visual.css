@@ -1,9 +1,10 @@
 body{
     overflow-x: hidden;
+    background-color: rgb(211, 166, 139);
 }
 .navbar {
     list-style: none;
-    background: rgb(54, 54, 54);
+    background: rgb(155, 105, 61);
     height: 10%;
     padding: 0;
     margin: 0;
@@ -16,7 +17,7 @@ body{
   
   .navbar a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     display: block;
     padding: 15px 20px;
     text-transform: uppercase;
@@ -38,7 +39,7 @@ body{
   }
 
   .divisoria1{
-    background: red;
+    background: rgb(155, 105, 61);
     height: 1vh;
     position: relative;
     top: -10vh;
