@@ -1,0 +1,85 @@
+</head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visual.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Currículo</title>
+</head>
+
+<body>
+    <div class="conteudo">
+        <header>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#">Currículo</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="perfil">
+            <img src="images/perfil.jpg" alt="Foto de Perfil" style="width: 100%"></img>
+        </div>
+        <div class="info_pessoais">
+            <h1> Informações Pessoais</h1>
+            <div>
+                <p>Nome: Rocket</p>
+                <p>Sobrenome: Raccoon</p>
+                <p>Email: rocket.guardiao@gmail.com</p>
+                <p>Telefone: (00) 4002-8922</p>
+                <p>Endereço: Nave Milano</p>
+            </div>
+        </div>
+        <div class="divisoria1"></div>
+        <div class="info_formacao">
+            <h1>Formação</h1>
+            <div>
+                <p>Curso: Segurança</p>
+                <p>Instituição: Patrulheiros espaciais</p>
+                <p>Início/Término: 12/01/2014 - 25/04/2018</p>
+            </div>
+        </div>
+        
+        <div class="info_realizacoes">
+            <h1>Realizações</h1>
+            <div>
+                <p>Certificado: Líder dos guardiões da galáxia</p>
+                <p>Data de emissão: 04/05/2023</p>
+                <p>Certificado: Membro honorário dos guardiões da galáxia</p>
+                <p>Data de emissão: 17/10/2016</p>
+            </div>
+        </div>
+        <div class="info_habilidades">
+            <h1>Habilidades</h1>
+            <div>
+                <p>Força:</p>
+                <p>Agilidade:</p>
+                <p>Inteligência:</p>
+                <p>Fofura:</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="ajuda">
+        <!-- Conteúdo da caixa de ajuda será carregado dinamicamente via AJAX -->
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "ajuda.html", // Caminho para o arquivo externo com o conteúdo da caixa de ajuda
+                success: function(response) {
+                    $("#ajuda").html(response); // Insere o conteúdo na div de ajuda
+                },
+                error: function() {
+                    $("#ajuda").html("Não foi possível carregar a caixa de ajuda."); // Mensagem de erro caso ocorra algum problema
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
